@@ -1,4 +1,3 @@
-'use strict';
 var browserify = require('browserify')
   , source     = require('vinyl-source-stream')
   , pkg        = require('../package')
