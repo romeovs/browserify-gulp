@@ -49,7 +49,7 @@ gulp.task('browserify', function() {
 `gulp-browserify` has the same signature as [`browserify`][browserify]:
 
 ```js
-Browserify(entries, options);
+Browserify(entries, options)
 // or
 Browserify(options)
 ```
@@ -138,7 +138,7 @@ Browserify(options)
       experimental: options.experimental
     }));
   })
-  .done(funciton(strm) {
+  .done(function(strm) {
     // ...
   });
 };
