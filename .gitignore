@@ -1,3 +1,4 @@
 .coveralls.yml
 build/
 node_modules/
+coverage.html
