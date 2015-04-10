@@ -1,3 +1,5 @@
+import browserify from 'browserify'
+
 class Stub {
   constructor() {
     this.commands = [];

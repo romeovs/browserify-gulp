@@ -1,11 +1,5 @@
 import gutil from 'gulp-util'
 
-// returns filename relative to project
-// directory (containing gulpfile)
-// var relify = function(file) {
-//   return path.relative(gulpdir, file);
-// };
-
 var unique = function(arr) {
   var uniq = [];
   for (var i = 0; i < arr.length; i++) {
@@ -16,16 +10,10 @@ var unique = function(arr) {
   return uniq;
 };
 
-Array.prototype.unique = function() {
-  return unique(this);
-};
-
 var bs = gutil.colors.cyan('browserify');
 
 export default function(files) {
-  (files || [])
-    // .map(relify)
-    .unique()
+  unique(files || [])
     .map(file => gutil.colors.magenta(`./${file}`))
     .forEach(function(file) {
       gutil.log(`${file} was changed`);

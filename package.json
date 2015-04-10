@@ -4,10 +4,10 @@
   "description": "",
   "main": "build/index.js",
   "scripts": {
-    "compile":     "babel src -d build",
-    "test":        "lab -T babel.js -S $@",
-    "coverage":    "npm run test -- --coverage -r lcov | ./node_modules/.bin/coveralls",
-    "hcoverage":   "npm run test -- --coverage -r html -o coverage.html && open coverage.html"
+    "compile": "babel src -d build",
+    "test": "lab -T babel.js -S -f test/ -l -m 6000 $@",
+    "coverage": "npm run test -- --coverage -r lcov | ./node_modules/.bin/coveralls",
+    "hcoverage": "npm run test -- --coverage -r html -o coverage.html && open coverage.html"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,14 @@
     "chai": "^2.2.0",
     "coveralls": "^2.11.2",
     "gulp": "^3.8.11",
+    "gulp-buffer": "0.0.2",
     "gulp-eslint": "^0.8.0",
     "lab": "^5.5.1"
+  },
+  "dependencies": {
+    "browserify": "^9.0.8",
+    "gulp-util": "^3.0.4",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.1.0"
   }
 }

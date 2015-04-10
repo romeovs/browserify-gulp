@@ -1,4 +1,3 @@
-import browserify from 'browserify'
 import watchify   from 'watchify'
 import gutil      from 'gulp-util'
 import source     from 'vinyl-source-stream'
