@@ -131,7 +131,7 @@ Browserify(options)
       experimental: options.experimental
     }));
   })
-  .done(funciton(strm) {
+  .done(function(strm) {
     // ...
   });
 };
