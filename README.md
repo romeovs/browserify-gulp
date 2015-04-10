@@ -13,6 +13,13 @@ to improve performance drastically.
 It is based on [this gulp recipe][recipe], but with some adaptations to make
 configuring it easier.
 
+## Installation
+To install `gulp-browserify` do:
+
+```
+npm install --save-dev romeovs/gulp-browserify
+```
+
 ## Usage
 At it's most basic use, you can use `gulp-browserify` like this:
 
