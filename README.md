@@ -138,6 +138,9 @@ Browserify(options)
 ```
 
 
+## Todo
+- write a lot more tests
+
 ### License
 This code is licensed under the [ISC license](./LICENSE)
 
