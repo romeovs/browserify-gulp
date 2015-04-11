@@ -4,6 +4,7 @@
   "description": "",
   "main": "build/index.js",
   "scripts": {
+    "postinstall": "npm run compile",
     "compile": "babel --optional runtime src -d build",
     "test": "lab -T babel.js -S -f test/ -l -m 6000 $@",
     "coverage": "npm run test -- --coverage -r lcov | ./node_modules/.bin/coveralls",
