@@ -1,10 +1,11 @@
 # gulp-browserify
 
-[![Build Status](https://travis-ci.org/romeovs/gulp-browserify.svg?branch=master)](https://travis-ci.org/romeovs/gulp-browserify)
-[![Coverage Status](https://coveralls.io/repos/romeovs/gulp-browserify/badge.svg?branch=master)](https://coveralls.io/r/romeovs/gulp-browserify?branch=master)
-[![Dependencies](https://david-dm.org/romeovs/gulp-browserify.svg)](https://david-dm.org/romeovs/gulp-browserify)
-[![devDependencies](https://david-dm.org/romeovs/gulp-browserify/dev-status.svg)](https://david-dm.org/romeovs/gulp-browserify#info=devDependencies)
-[![Join the chat at https://gitter.im/romeovs/config](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/romeovs/gulp-browserify?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://img.shields.io/travis/romeovs/gulp-browserify.svg?style=flat-square)][travis]
+[![Coverage Status](https://img.shields.io/coveralls/romeovs/gulp-browserify.svg?style=flat-square)][coveralls]
+[![Dependencies](https://img.shields.io/david/romeovs/gulp-browserify.svg?style=flat-square)][david]
+[![devDependencies](https://img.shields.io/david/dev/romeovs/gulp-browserify.svg?style=flat-square)][david-dev]
+[![license](https://img.shields.io/badge/license-ISC-373737.svg?style=flat-square)][license]
+[![gitter](https://img.shields.io/badge/GITTER-join%20chat%20→-00d86e.svg?style=flat-square)][gitter]
 
 `gulp-browserify` is a drop-in replacement for [`browserify`][browserify] that
 can be configured easily and has support for [`watchify`][watchify]
@@ -152,8 +153,14 @@ Browserify(options)
 
 
 ### License
-This code is licensed under the [ISC license](./LICENSE)
+This code is licensed under the [ISC license][license]
 
+[travis]:     https://travis-ci.org/romeovs/gulp-browserify
+[coveralls]:  https://coveralls.io/r/romeovs/gulp-browserify?branch=master
+[david]:      https://david-dm.org/romeovs/gulp-browserify#info=dependencies
+[david-dev]:  https://david-dm.org/romeovs/gulp-browserify#info=devDependencies
+[gitter]:     https://gitter.im/romeovs/gulp-browserify?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[license]:    ./LICENSE
 [browserify]: http://browserify.org
 [watchify]:   https://github.com/substack/watchify
 [recipe]:     https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md "gulp recipe"
