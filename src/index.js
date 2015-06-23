@@ -83,7 +83,9 @@ var Browserify = function (options = {}) {
             // end stream
             this.emit('end');
           })
-          .pipe(source(options.filename)); // create file for gulp
+          .pipe(source(options.filename)) // create file for gulp
+          .on('end', options.logtime)
+          ;
 
       // continue with stream
       handler(stream);
@@ -91,8 +93,8 @@ var Browserify = function (options = {}) {
 
     if ( options.watching ) {
       bundler.on('update', this.rebundle);
+      bundler.on('time',   options.logtime);
     }
-    bundler.on('time',   options.logtime);
 
     // call rebundle to sart ping-pong
     this.rebundle();
