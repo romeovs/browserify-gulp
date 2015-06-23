@@ -132,3 +132,6 @@ export default function(entries, options) {
 
   return new Browserify(options);
 };
+
+export { babelify } from './middleware/babelify';
+
