@@ -91,8 +91,8 @@ var Browserify = function (options = {}) {
 
     if ( options.watching ) {
       bundler.on('update', this.rebundle);
-      bundler.on('time',   options.logtime);
     }
+    bundler.on('time',   options.logtime);
 
     // call rebundle to sart ping-pong
     this.rebundle();
