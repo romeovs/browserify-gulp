@@ -3,7 +3,7 @@ import babelify from 'babelify';
 export default function (options = {}) {
   // get extensions
   const {
-    extentions = [ '.jsx', '.es' ]
+    extensions = [ '.jsx', '.es' ]
   } = options;
 
   return function() {
