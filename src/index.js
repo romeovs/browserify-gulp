@@ -84,8 +84,11 @@ var Browserify = function (options = {}) {
             this.emit('end');
           })
           .pipe(source(options.filename)) // create file for gulp
-          .on('end', options.logtime)
           ;
+
+      if ( !options.watching ) {
+          stream.on('end', options.logtime);
+      }
 
       // continue with stream
       handler(stream);
