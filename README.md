@@ -1,13 +1,6 @@
-# gulp-browserify
+# browserify-gulp
 
-[![Build Status](https://img.shields.io/travis/romeovs/gulp-browserify.svg?style=flat-square)][travis]
-[![Coverage Status](https://img.shields.io/coveralls/romeovs/gulp-browserify.svg?style=flat-square)][coveralls]
-[![Dependencies](https://img.shields.io/david/romeovs/gulp-browserify.svg?style=flat-square)][david]
-[![devDependencies](https://img.shields.io/david/dev/romeovs/gulp-browserify.svg?style=flat-square)][david-dev]
-[![license](https://img.shields.io/badge/license-ISC-373737.svg?style=flat-square)][license]
-[![gitter](https://img.shields.io/badge/GITTER-join%20chat%20→-00d86e.svg?style=flat-square)][gitter]
-
-`gulp-browserify` is a drop-in replacement for [`browserify`][browserify] that
+`browserify-gulp` is a drop-in replacement for [`browserify`][browserify] that
 can be configured easily and has support for [`watchify`][watchify]
 to improve performance drastically.
 
@@ -15,18 +8,18 @@ It is based on [this gulp recipe][recipe], but with some adaptations to make
 configuring it easier.
 
 ## Installation
-To install `gulp-browserify` do:
+To install `browserify-gulp` do:
 
 ```
-npm install --save-dev romeovs/gulp-browserify
+npm install --save-dev browserify-gulp
 ```
 
 ## Usage
-At it's most basic use, you can use `gulp-browserify` like this:
+At it's most basic use, you can use `browserify-gulp` like this:
 
 ```js
 var gulp       = require('gulp')
-  , Browserify = require('gulp-browserify')
+  , Browserify = require('browserify-gulp')
   ;
 
 var options = {
@@ -47,7 +40,7 @@ gulp.task('browserify', function() {
 ```
 
 ## Options
-`gulp-browserify` has the same signature as [`browserify`][browserify]:
+`browserify-gulp` has the same signature as [`browserify`][browserify]:
 
 ```js
 Browserify(entries, options)
@@ -56,14 +49,14 @@ Browserify(options)
 ```
 
 All the options are passed to `browserify` internally so you can use
-`gulp-browserify` as a drop-in replacement fro `browserify`.
+`browserify-gulp` as a drop-in replacement fro `browserify`.
 
 ### `options.entries`
 An array of filenames that serve as an entrypoint, as with `browserify`.  Can
-also be passed as a normal argument to `gulp-browserify`.
+also be passed as a normal argument to `browserify-gulp`.
 
 ### `options.watching`
-If this is set to `true`, `gulp-browserify` will keep 
+If this is set to `true`, `browserify-gulp` will keep 
 on watching the all the relevant files and rebuild everytime
 one of them changes.  This is done using [`watchify`][watchify],
 which caches intermediate files, making the builds super fast.
@@ -71,7 +64,7 @@ which caches intermediate files, making the builds super fast.
 Defaults to `false`.
 
 ### `options.delay`
-This is the default delay (in ms) `gulp-browserify` will wait before 
+This is the default delay (in ms) `browserify-gulp` will wait before 
 triggering a rebuild.
 
 Defaults to `60`.
@@ -113,7 +106,7 @@ Browserify(options)
 A middleware function has access to three things:
 
   - `this.options` this is the options object
-     as was passed to `gulp-browserify`, possibly
+     as was passed to `browserify-gulp`, possibly
      already edited by other middleware.
   - `this.bundler` the bundler that was created by `browserify`.  You can call
     almost all methods on it (`transform`, `add`, `require`, `external`,
@@ -147,19 +140,15 @@ Browserify(options)
 
 
 ## Todo
-- write a lot more tests
+- write tests
 - add examples
 - add links to middleware repos
+- move to full es6
 
 
 ### License
 This code is licensed under the [ISC license][license]
 
-[travis]:     https://travis-ci.org/romeovs/gulp-browserify
-[coveralls]:  https://coveralls.io/r/romeovs/gulp-browserify?branch=master
-[david]:      https://david-dm.org/romeovs/gulp-browserify#info=dependencies
-[david-dev]:  https://david-dm.org/romeovs/gulp-browserify#info=devDependencies
-[gitter]:     https://gitter.im/romeovs/gulp-browserify?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 [license]:    ./LICENSE
 [browserify]: http://browserify.org
 [watchify]:   https://github.com/substack/watchify
