@@ -122,7 +122,7 @@ to the `this.options.extensions` array instead of overwiting it).
 
 As an example, here is a transform that adds `jsx` support via `babelify`:
 ```js
-var babelify = require('babelify');
+import babelify from 'babelify'
 // ...
 Browserify(options)
   .configure(function() {
