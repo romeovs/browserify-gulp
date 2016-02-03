@@ -18,11 +18,11 @@ npm install --save-dev browserify-gulp
 At it's most basic use, you can use `browserify-gulp` like this:
 
 ```js
-var gulp       = require('gulp')
-  , Browserify = require('browserify-gulp')
-  ;
+import gulp       from 'gulp'
+import Browserify from 'browserify-gulp'
+// or use require('browserify-gulp').default
 
-var options = {
+const options = {
   entries: [ './src/main.js' ]
 };
 
